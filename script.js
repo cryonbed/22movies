@@ -10,7 +10,7 @@ pencarian.addEventListener("click", async function () {
 });
 
 function getMovies(keyword) {
-  return fetch("http://www.omdbapi.com/?apikey=ba525874&s=" + keyword)
+  return fetch("https://www.omdbapi.com/?apikey=ba525874&s=" + keyword)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -41,7 +41,7 @@ document.addEventListener("click", async function (e) {
 });
 
 function getMovieDetail(imdbid) {
-  return fetch("http://www.omdbapi.com/?apikey=ba525874&i=" + imdbid)
+  return fetch("https://www.omdbapi.com/?apikey=ba525874&i=" + imdbid)
     .then((response) => response.json())
     .then((m) => m);
 }
